@@ -1,0 +1,40 @@
+# ========================================
+# Configuration des comptes utilisateurs — EduGuard AI
+# ========================================
+# Format: identifiant: {nom_affiché, département, password_env (variable d'environnement)}
+#
+# Les mots de passe sont lus depuis les variables d'environnement définies dans .env
+# Copiez .env.example en .env et remplissez les valeurs.
+#
+# ⚠️ Ne stockez JAMAIS de mots de passe en clair dans ce fichier.
+
+users:
+  chef_informatique:
+    name: "M. Alaoui"
+    department: "Informatique"
+    password_env: "EDUGUARD_DEFAULT_PASSWORD"
+
+  chef_gestion:
+    name: "Mme. Benali"
+    department: "Gestion"
+    password_env: "EDUGUARD_DEFAULT_PASSWORD"
+
+  chef_tourisme:
+    name: "M. El Fassi"
+    department: "Tourisme"
+    password_env: "EDUGUARD_DEFAULT_PASSWORD"
+
+  chef_infirmiers:
+    name: "Mme. Amrani"
+    department: "Soins infirmiers"
+    password_env: "EDUGUARD_DEFAULT_PASSWORD"
+
+  chef_ingenierie:
+    name: "M. Tazi"
+    department: "Ingénierie informatique"
+    password_env: "EDUGUARD_DEFAULT_PASSWORD"
+
+  admin:
+    name: "Administration"
+    department: "Administration"
+    password_env: "EDUGUARD_ADMIN_PASSWORD"

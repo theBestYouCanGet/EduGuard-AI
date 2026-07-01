@@ -1,0 +1,31 @@
+# ========================================
+# EduGuard AI — Docker Compose
+# ========================================
+# Lancer :  docker-compose up --build
+# Arrêter : docker-compose down
+# Logs  :   docker-compose logs -f
+
+services:
+  eduguard-ai:
+    build: .
+    container_name: eduguard-ai
+    ports:
+      - "8501:8501"
+    environment:
+      # Mots de passe — à personnaliser (en production : utiliser Docker secrets)
+      - EDUGUARD_DEFAULT_PASSWORD=fsbm2025
+      - EDUGUARD_ADMIN_PASSWORD=admin2025
+    volumes:
+      # Monter un volume pour persister les données (optionnel)
+      - eduguard-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  eduguard-data:
+    driver: local

@@ -1,0 +1,117 @@
+# ========================================
+# EduGuard AI — .gitignore
+# ========================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+sdist/
+wheels/
+*.whl
+pip-wheel-metadata/
+share/python-wheels/
+.installed.cfg
+MANIFEST
+
+# ---------- Environnements virtuels ----------
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ---------- Variables d'environnement (SÉCURITÉ) ----------
+.env
+.env.local
+.env.*.local
+*.env
+secrets.yaml
+secrets.json
+
+# ---------- Streamlit ----------
+.streamlit/
+.streamlit/secrets.toml
+
+# ---------- Jupyter Notebook ----------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ---------- Données (volumineuses / confidentielles) ----------
+data/*.csv
+data/*.xlsx
+data/*.npy
+data/*.parquet
+data/*.zip
+!data/.gitkeep
+
+# ---------- Dataset UCI (à télécharger séparément) ----------
+*.csv
+!app/pages/*.py
+!notebooks/*.ipynb
+
+# ---------- Modèles trop volumineux (optionnel — décommentez si besoin) ----------
+# models/*.pkl
+# models/*.joblib
+# models_fsmb/*.pkl
+
+# ---------- OS / IDE ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ---------- Logs ----------
+*.log
+logs/
+log/
+
+# ---------- Tests / Coverage ----------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ---------- Docker ----------
+*.pid
+*.seed
+*.pid.lock
+
+# ---------- Divers ----------
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+.directory

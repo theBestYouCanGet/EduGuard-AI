@@ -1,0 +1,8 @@
+# Données brutes — ne pas committer (trop volumineuses / confidentielles)
+*.csv
+*.xlsx
+*.npy
+!.gitkeep
+
+# Téléchargez le dataset UCI ici :
+# https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success

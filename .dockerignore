@@ -1,0 +1,48 @@
+# Docker ignore — fichiers à ne pas inclure dans l'image Docker
+# (similaire à .gitignore mais pour le build Docker)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Variables d'environnement
+.env
+.env.local
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (l'image n'a pas besoin de la doc)
+docs/
+*.md
+LICENSE
+
+# Docker (ne pas inclure dans le build)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Notebooks (pas nécessaires pour l'app)
+notebooks/
+
+# Données brutes
+data/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db

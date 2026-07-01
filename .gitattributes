@@ -1,0 +1,27 @@
+# ========================================
+# EduGuard AI — .gitattributes
+# ========================================
+# Normalise les fins de ligne entre Windows/Linux/macOS
+
+* text=auto eol=lf
+
+# Fichiers spécifiques
+*.py     text eol=lf
+*.md     text eol=lf
+*.txt    text eol=lf
+*.yaml   text eol=lf
+*.yml    text eol=lf
+*.toml   text eol=lf
+*.json   text eol=lf
+*.csv    text eol=lf
+
+# Fichiers binaires (pas de modification des fins de ligne)
+*.pkl    binary
+*.joblib binary
+*.npy    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.pdf    binary
+*.zip    binary
